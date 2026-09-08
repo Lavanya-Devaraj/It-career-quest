@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="IT Career Quest API")
+from Backend.app.core.config import settings
+
+app = FastAPI(title=settings.APP_NAME)
 
 
 @app.get("/health")
